@@ -1,8 +1,10 @@
 import requests
 import argparse
 
+
 class Brewery:
-    def __init__(self, id, name, brewery_type, street, city, state, postal_code, country, phone, website_url):
+    def __init__(self, id, name, brewery_type, street,
+                 city, state, postal_code, country, phone, website_url):
         self.id = id
         self.name = name
         self.brewery_type = brewery_type
@@ -15,9 +17,12 @@ class Brewery:
         self.website_url = website_url
 
     def __str__(self):
-        return f"Brewery ID: {self.id}\nName: {self.name}\nType: {self.brewery_type}\n" \
-               f"Address: {self.street}, {self.city}, {self.state} {self.postal_code}, {self.country}\n" \
+        return f"Brewery ID: {self.id}\nName: {self.name}\nType: " \
+               f"{self.brewery_type}\n" \
+               f"Address: {self.street}, {self.city}, {self.state} " \
+               f"{self.postal_code}, {self.country}\n" \
                f"Phone: {self.phone}\nWebsite: {self.website_url}\n"
+
 
 def fetch_breweries():
     api_url = "https://api.openbrewerydb.org/breweries"
@@ -25,8 +30,10 @@ def fetch_breweries():
     breweries_data = response.json()[:20]  # Pobranie 20 pierwszych obiektów
     return breweries_data
 
+
 def main():
-    parser = argparse.ArgumentParser(description="Fetch and display brewery information.")
+    parser = argparse.ArgumentParser(
+        description="Fetch and display brewery information.")
     parser.add_argument("--city", help="Filter breweries by city")
 
     args = parser.parse_args()
@@ -36,7 +43,9 @@ def main():
 
     if city_filter:
         # Jeżeli podano parametr --city, filtrowanie wyników
-        breweries_data = [brewery_data for brewery_data in breweries_data if brewery_data['city'].lower() == city_filter.lower()]
+        breweries_data = [brewery_data for brewery_data in breweries_data
+                          if brewery_data['city'].lower() ==
+                          city_filter.lower()]
 
     breweries_instances = []
     for brewery_data in breweries_data:
@@ -56,6 +65,7 @@ def main():
 
     for brewery_instance in breweries_instances:
         print(brewery_instance)
+
 
 if __name__ == "__main__":
     main()

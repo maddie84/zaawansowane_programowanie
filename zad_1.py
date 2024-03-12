@@ -15,7 +15,8 @@ class Student:
             return True
         else:
             return False
-        
+
+
 stud1 = Student("Hubi", [5, 10, 40])
 stud2 = Student("Magda", [80, 80, 40])
 
