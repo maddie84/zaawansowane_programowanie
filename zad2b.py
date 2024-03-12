@@ -8,7 +8,8 @@ def mnozenie_liczb(liczby):
     for liczba in liczby:
         print(liczba*2)
 
-liczby_lista = [1,2,3,4,5]
+
+liczby_lista = [1, 2, 3, 4, 5]
 mnozenie_liczb(liczby_lista)
 
 
@@ -16,5 +17,6 @@ def mnozenie(liczby):
     wynik = [liczba * 2 for liczba in liczby]
     return wynik
 
-liczby_lista = [1,2,3,4,5]
+
+liczby_lista = [1, 2, 3, 4, 5]
 print(mnozenie(liczby_lista))
