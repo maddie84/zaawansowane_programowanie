@@ -4,15 +4,17 @@
 # zmiennej, a następnie wykorzystując warunek logiczny wyświetlić prawidłowy
 # tekst "Liczba parzysta" / "Liczba nieparzysta"
 
-def parzysta (a):
-    if a%2==0:
+def parzysta(a):
+    if a % 2 == 0:
         return True
-    
+
+
 def czy_parzysta(liczba):
-    if liczba == True:
+    if liczba is True:
         print("Liczba parzysta")
     else:
         print("Liczba nieparzysta")
+
 
 wynik = parzysta(10)
 

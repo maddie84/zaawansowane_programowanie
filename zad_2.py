@@ -4,4 +4,5 @@
 def mnozenie(a, b):
     return a*b
 
-print(mnozenie(2,5))
+
+print(mnozenie(2, 5))

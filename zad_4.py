@@ -7,5 +7,6 @@ def suma(a, b, c):
         return True
     else:
         return False
-    
-print(suma(1,1,3))
+
+
+print(suma(1, 1, 3))
