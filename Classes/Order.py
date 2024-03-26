@@ -1,6 +1,6 @@
-import Book as bk
-import Employee as em
-import Library as lb
+from Classes import Book as bk
+from Classes import Employee as em
+from Classes import Library as lb
 
 class Order:
     def __init__(self, employee, student, books, order_date):

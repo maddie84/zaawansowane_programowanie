@@ -1,4 +1,4 @@
-import Library
+from Classes import Library as lb
 
 class Book:
     def __init__(self, library, publication_date, author_name,
